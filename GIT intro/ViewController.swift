@@ -9,18 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // Variable for button presses
     var count = 0
     @IBOutlet weak var labelText: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        labelText.text = "Press the button"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Button actions
     @IBAction func buttonPress(_ sender: Any) {
         count += 1
         if count == 1 {
