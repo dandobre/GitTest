@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var count = 0
+    @IBOutlet weak var labelText: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,15 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func buttonPress(_ sender: Any) {
+        count += 1
+        if count == 1 {
+            labelText.text = "Pressed once"
+        }
+        else {
+            labelText.text = "Pressed " + String(count) + " times"
+        }
     }
 
 
